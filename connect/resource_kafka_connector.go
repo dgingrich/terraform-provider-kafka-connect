@@ -126,6 +126,7 @@ func connectorRead(d *schema.ResourceData, meta interface{}) error {
 		d.Set("config", conn.Config)
 	}
 
+	log.Printf("[ERROR] error from GetConnector(%v): %v", conn.Config, err);
 	return err
 }
 
